@@ -4,34 +4,34 @@
 ## setup env
 
 ```bash
-  pip install virtualenv
+pip install virtualenv
 ```
 
 ```bash
-  virtualenv env
+virtualenv env
 ```
 ## when error come 
 window powershell (admin)
 
 ```bash
-  Set-ExecutionPolicy unrestricted
+Set-ExecutionPolicy unrestricted
 ```
 ## or
 ```bash
-  python -m venv env
+python -m venv env
 
 ```
 ## Activating Virtual Environment
 ```bash
-  ./env/scripts/activate.ps1
+./env/scripts/activate.ps1
 ```
 ## Flask installation
 ```bash
-  pip install flask
+pip install flask
 ```
 Make
 ```bash
-  app.py
+python app.py
 ```
 Copy in app.py
 ```bash
