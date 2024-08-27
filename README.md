@@ -16,6 +16,11 @@ window powershell (admin)
 ```bash
   Set-ExecutionPolicy unrestricted
 ```
+## or
+```bash
+  python -m venv env
+
+```
 ## Activating Virtual Environment
 ```bash
   ./env/scripts/activate.ps1
