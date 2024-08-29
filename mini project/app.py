@@ -13,6 +13,9 @@ class Todo(db.Model):
     desc = db.Column(db.String(200), nullable=False)
     date_cr = db.Column(db.DateTime, default=datetime.utcnow)
 
+    def __repr__(self) ->str:
+        return f"{self.sno} - {self.Title}"
+
 
 @app.route('/')
 def hello_world():
