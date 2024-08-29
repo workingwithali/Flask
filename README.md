@@ -65,3 +65,16 @@ def hello_world():
     return render_template('index.html')
 
 ```
+# creat datebase
+installation 
+```bash
+pip install flask-sqlalchemy
+```
+import
+```bash
+from flask_sqlalchemy import SQLAlchemy
+```
+initialize
+```bash
+from flask_sqlalchemy import SQLAlchemy
+```
