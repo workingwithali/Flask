@@ -74,7 +74,12 @@ import
 ```bash
 from flask_sqlalchemy import SQLAlchemy
 ```
+go this
+```bash
+https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/
+```
 initialize
 ```bash
-from flask_sqlalchemy import SQLAlchemy
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
+db = SQLAlchemy(app)
 ```
