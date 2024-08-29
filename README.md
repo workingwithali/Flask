@@ -83,6 +83,7 @@ initialize
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+app.app_context().push()
 ```
 ```bash
 class Todo(db.Model):
@@ -93,4 +94,13 @@ class Todo(db.Model):
 
     def __repr__(self) ->str:
         return f"{self.sno} - {self.Title}"
+```
+open python in shell
+```bash
+python
+```
+create the initial database
+```bash
+from yourapplication import db
+db.create_all()
 ```
