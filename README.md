@@ -81,5 +81,6 @@ https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/
 initialize
 ```bash
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 ```
