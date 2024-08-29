@@ -104,3 +104,9 @@ create the initial database
 from yourapplication import db
 db.create_all()
 ```
+add in @app.route('/')
+```bash
+todo = Todo(title="first todo", desc="sdkfsdahfiowehndf")
+    db.session.add(todo)
+    db.session.commit()
+```
