@@ -10,7 +10,7 @@ app.app_context().push()
 
 class Todo(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
-    Title = db.Column(db.String(200), nullable=False)
+    title = db.Column(db.String(200), nullable=False)
     desc = db.Column(db.String(200), nullable=False)
     date_cr = db.Column(db.DateTime, default=datetime.utcnow)
 
@@ -21,6 +21,9 @@ class Todo(db.Model):
 
 @app.route('/')
 def hello_world():
+    todo = Todo(title="first todo", desc="sdkfsdahfiowehndf")
+    db.session.add(todo)
+    db.session.commit()
     return render_template('index.html')
 
 if __name__ == '__main__':
