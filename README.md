@@ -84,3 +84,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 ```
+```bash
+class Todo(db.Model):
+    sno = db.Column(db.Integer, primary_key = True)
+    Title = db.Column(db.String(200), nullable=False)
+    desc = db.Column(db.String(200), nullable=False)
+    date_cr = db.Column(db.DateTime, default=datetime.utcnow)
+    ```
