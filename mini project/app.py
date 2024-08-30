@@ -24,6 +24,8 @@ def hello_world():
     todo = Todo(title="first todo", desc="sdkfsdahfiowehndf")
     db.session.add(todo)
     db.session.commit()
+    alltodo = Todo.query.all()
+    print(alltodo)
     return render_template('index.html')
 
 @app.route('/show')
