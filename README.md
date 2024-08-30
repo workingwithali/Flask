@@ -118,3 +118,14 @@ give database to index.html
 ```bash
 return render_template('index.html', alltodo=alltodo)
 ```
+show date on webpage
+```bash
+{% for todo in alltodo %}
+    <tr>
+         <th scope="row">{{todo.sno}}</th>
+        <td>{{todo.title}}</td>
+        <td>{{todo.desc}}</td>
+        <td>{{todo.date_cr}}</td>
+    </tr>
+    {% endfor %}
+```
