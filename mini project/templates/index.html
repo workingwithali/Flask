@@ -53,14 +53,14 @@
     </nav>
     <div class="container my-3">
         <h2>Add a ToDo</h2>
-        <form>
+        <form method="POST" action="/">
             <div class="mb-3">
                 <label for="add" class="form-label"> Todo Tilte</label>
-                <input type="text" class="form-control" id="add" aria-describedby="emailHelp">
+                <input type="text" class="form-control" name="tilte" id="add" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="des" class="form-label">Description</label>
-                <input type="text" class="form-control" id="des">
+                <input type="text" class="form-control" name="desc" id="des">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -79,7 +79,7 @@
             <tbody>
                 {% for todo in alltodo %}
                 <tr>
-                    <th scope="row">{{todo.sno}}</th>
+                    <th scope="row">{{loop.index}}</th>
                     <td>{{todo.title}}</td>
                     <td>{{todo.desc}}</td>
                     <td>{{todo.date_cr}}</td>
