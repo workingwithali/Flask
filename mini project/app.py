@@ -25,8 +25,7 @@ def hello_world():
     db.session.add(todo)
     db.session.commit()
     alltodo = Todo.query.all()
-    print(alltodo)
-    return render_template('index.html')
+    return render_template('index.html', alltodo=alltodo)
 
 @app.route('/show')
 def show():

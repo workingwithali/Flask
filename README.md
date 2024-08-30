@@ -112,9 +112,9 @@ todo = Todo(title="first todo", desc="sdkfsdahfiowehndf")
 ```
 Accessing the data in database
 ```bash
-@app.route('/show')
-def show():
-    alltodo = Todo.query.all()
-    print(alltodo)
-    return "ali"
+alltodo = Todo.query.all()
+```
+give database to index.html
+```bash
+return render_template('index.html', alltodo=alltodo)
 ```
