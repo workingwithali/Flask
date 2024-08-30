@@ -110,3 +110,11 @@ todo = Todo(title="first todo", desc="sdkfsdahfiowehndf")
     db.session.add(todo)
     db.session.commit()
 ```
+Accessing the data in database
+```bash
+@app.route('/show')
+def show():
+    alltodo = Todo.query.all()
+    print(alltodo)
+    return "ali"
+```

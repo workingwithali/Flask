@@ -15,7 +15,7 @@ class Todo(db.Model):
     date_cr = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self) -> str:
-        return f"{self.sno} - {self.Title}"
+        return f"{self.sno} - {self.title}"
 
 
 
@@ -25,6 +25,13 @@ def hello_world():
     db.session.add(todo)
     db.session.commit()
     return render_template('index.html')
+
+@app.route('/show')
+def show():
+    alltodo = Todo.query.all()
+    print(alltodo)
+    
+    return "ali"
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
