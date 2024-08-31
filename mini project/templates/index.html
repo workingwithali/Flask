@@ -62,7 +62,7 @@
                 <label for="des" class="form-label">Description</label>
                 <input type="text" class="form-control" name="desc" id="des">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-dark">Submit</button>
         </form>
     </div>
     <div class="container">
@@ -74,6 +74,7 @@
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
                     <th scope="col">Date</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -83,6 +84,10 @@
                     <td>{{todo.title}}</td>
                     <td>{{todo.desc}}</td>
                     <td>{{todo.date_cr}}</td>
+                    <td>
+                        <a href="/update/{{todo.sno}}" type="button" class="btn btn-dark btn-sm mx-1">Update</button>
+                        <a href="/delete/{{todo.sno}}" type="button" class="btn btn-dark btn-sm mx-1">Delete</button>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
